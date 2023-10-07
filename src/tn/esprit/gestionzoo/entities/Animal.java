@@ -1,7 +1,42 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Animal {
     private String family;
     String name;
     private int age;
+
+    public String getFamily() {
+        return family;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setMammal(boolean mammal) {
+        isMammal = mammal;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public boolean isMammal() {
+        return isMammal;
+    }
+
     private boolean isMammal;
     public Animal(String family, String name, int age, boolean
             isMammal) {
