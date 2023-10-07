@@ -90,6 +90,15 @@ public class Zoo {
         }
         return -1;
     }
+    //
+    boolean isZooFull() {
+        return compteur_animal == nbrCages;
+    }
+    static Zoo comparerZoo(Zoo z1, Zoo z2) {
+        if (z1.compteur_animal > z2.compteur_animal)
+            return z1;
+        return z2;
+    }
     @Override
     public String toString() {
         return "Nom du zoo : " + name + "\nVille du zoo : " + city + "\nNombre de cages : " + nbrCages;
