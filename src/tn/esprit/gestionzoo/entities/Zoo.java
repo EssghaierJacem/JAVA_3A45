@@ -65,7 +65,7 @@ public class Zoo {
         if (name != null && !name.trim().isEmpty()) {
             this.name = name;
         } else {
-            throw new IllegalArgumentException("The tn.esprit.gestionzoo.entities.Zoo can't be empty!");
+            throw new IllegalArgumentException("");
         }
     }
 
