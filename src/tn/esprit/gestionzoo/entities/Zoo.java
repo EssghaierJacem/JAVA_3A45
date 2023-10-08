@@ -28,7 +28,7 @@ public class Zoo {
     public void displayAnimals() {
         System.out.println("Animaux dans le zoo " + name + ":");
         for (int i = 0; i < compteur_animal; i++) {
-            System.out.println("tn.esprit.gestionzoo.entities.Animal " + (i + 1) + ": " + animals[i].name);
+            System.out.println("Animals are " + (i + 1) + ": " + animals[i].name);
         }
 
     }
@@ -87,7 +87,7 @@ public class Zoo {
 
     public boolean addAnimal(Animal animal){
         if (isZooFull()){
-            System.out.println("This tn.esprit.gestionzoo.entities.Zoo is Full, it is impossible to add another animal!"); //Instruction 17: Condition d'ajout
+            System.out.println("Zoo is Full, it is impossible to add another animal!"); //Instruction 17: Condition d'ajout
             return false;
         } else {
         }
