@@ -8,6 +8,7 @@ public non-sealed class Aquatic extends Animal  {
         super(family,name,age,isMammal);
         this.habitat =habitat;
     }
+    // This is for testing the contribution setting mail
     public String getHabitat() {
         return habitat;
     }
