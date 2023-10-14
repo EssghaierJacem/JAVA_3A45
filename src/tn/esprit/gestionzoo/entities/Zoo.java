@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package tn.esprit.gestionzoo.entities;
 
 public class Zoo {
     private  int nbrCages;
@@ -28,7 +28,7 @@ public class Zoo {
     public void displayAnimals() {
         System.out.println("Animaux dans le zoo " + name + ":");
         for (int i = 0; i < compteur_animal; i++) {
-            System.out.println("Animal " + (i + 1) + ": " + animals[i].name);
+            System.out.println("Animals are " + (i + 1) + ": " + animals[i].name);
         }
 
     }
@@ -41,7 +41,56 @@ public class Zoo {
         return -1;
     }
 
+    public int getNbrCages() {
+        return nbrCages;
+    }
+
+    public void setNbrCages(int nbrCages) {
+        this.nbrCages = nbrCages;
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name != null && !name.trim().isEmpty()) {
+            this.name = name;
+        } else {
+            throw new IllegalArgumentException("");
+        }
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getCompteur_animal() {
+        return compteur_animal;
+    }
+
+    public void setCompteur_animal(int compteur_animal) {
+        this.compteur_animal = compteur_animal;
+    }
+
     public boolean addAnimal(Animal animal){
+        if (isZooFull()){
+            System.out.println("Zoo is Full, it is impossible to add another animal!"); //Instruction 17: Condition d'ajout
+            return false;
+        } else {
+        }
         if (compteur_animal < nbrCages){
             animals[compteur_animal] = animal;
             compteur_animal++;
@@ -91,7 +140,7 @@ public class Zoo {
         return -1;
     }
     //
-    boolean isZooFull() {
+    public boolean isZooFull() {
         return compteur_animal == nbrCages;
     }
     static Zoo comparerZoo(Zoo z1, Zoo z2) {

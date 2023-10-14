@@ -1,16 +1,21 @@
+package tn.esprit.gestionzoo.main;
+
+import tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entities.Zoo;
+
 public class Main {
     public static void main(String[] args) {
         Animal Lion = new Animal("Carnivore","Lion",21, true);
         Animal Elephant = new Animal("Elephant", "Herbivore", 4,false);
 
-        Zoo Oorbata = new Zoo ("Oorbata","Gafsa",23);
+        Zoo Oorbata = new Zoo("Oorbata","Gafsa",23);
 
         //Instruction 6 : Au premier lieu il n'y avait pas d'un constructeur paramétres,
         // alors, il n'était pas possible de créer des instanciations.
 
-        Oorbata.displayZoo(); // Affiche les informations du Zoo "Oorbata"
+        Oorbata.displayZoo(); // Affiche les informations du tn.esprit.gestionzoo.entities.Zoo "Oorbata"
 
-        /* System.out.println(Oorbata); Affiche la réference du Zoo "Oorbata" (Instruction8)
+        /* System.out.println(Oorbata); Affiche la réference du tn.esprit.gestionzoo.entities.Zoo "Oorbata" (Instruction8)
         System.out.println(Oorbata.toString());
         (Instruction9) J'ai modifié la méthode toString et ajouté @Override, pour qu'elle prends la place de la méthode originale,
         ce qui permet d'avoir le meme role que "DisplayZoo"
