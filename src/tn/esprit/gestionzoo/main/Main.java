@@ -1,7 +1,6 @@
 package tn.esprit.gestionzoo.main;
 
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,4 +56,10 @@ public class Main {
         }
     }
     }
+    // Héritage_Prosit 5
+    Aquatic Aquatic1 = new Aquatic("Octopus", "Oscar", 3, true, "Deep Sea");
+    Terrestrial Terrestrial1 = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
+    Dolphin Dolphin1 = new Dolphin("Delphinidae", "Bubbles", 9, true, "Ocean", 13.1f);
+    Penguin Penguin1 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
+
 }
