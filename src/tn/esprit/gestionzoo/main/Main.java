@@ -74,6 +74,6 @@ public class Main {
         Aquatic1.swim();
         Dolphin1.swim();
         Penguin1.swim();
-        // The Dolphin has their own redfined method, so it's results differs than the one Penguin automatically Inherited.
+        // The Dolphin has their own redefined method, so it's results differs than the one Penguin automatically Inherited.
     }
 }
