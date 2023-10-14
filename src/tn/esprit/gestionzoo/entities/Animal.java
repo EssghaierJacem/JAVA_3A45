@@ -1,10 +1,24 @@
 package tn.esprit.gestionzoo.entities;
 
-public sealed class Animal permits  Aquatic, Terrestrial {
+public  class Animal  {
     private String family;
     String name;
     private int age;
 
+    public Animal() {
+    }
+
+    public Animal(String family, String name, int age, boolean
+            isMammal) {
+        this.family = family;
+        this.name = name;
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException("Age Cannot be negative");
+        }
+        this.isMammal = isMammal;
+    }
     public String getFamily() {
         return family;
     }
@@ -38,20 +52,7 @@ public sealed class Animal permits  Aquatic, Terrestrial {
     }
 
     private boolean isMammal;
-    public Animal() {
-    }
 
-    public Animal(String family, String name, int age, boolean
-            isMammal) {
-        this.family = family;
-        this.name = name;
-        if (age >= 0) {
-            this.age = age;
-        } else {
-            throw new IllegalArgumentException("Age Cannot be negative");
-        }
-        this.isMammal = isMammal;
-    }
     public void displayAnimal(){
         System.out.println("Nom du famille : " + family);
         System.out.println("Nom d'animal : " + name);

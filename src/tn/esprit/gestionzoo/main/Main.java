@@ -55,11 +55,10 @@ public class Main {
             System.out.println("There is still room in the zoo.");
         }
     }
+        // Héritage_Prosit 5
+        Aquatic Aquatic1 = new Aquatic("Octopus", "Oscar", 3, true, "Deep Sea");
+        Terrestrial Terrestrial1 = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
+        Dolphin Dolphin1 = new Dolphin("Delphinidae", "Bubbles", 9, true, "Ocean", 13.1f);
+        Penguin Penguin1 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
     }
-    // Héritage_Prosit 5
-    Aquatic Aquatic1 = new Aquatic("Octopus", "Oscar", 3, true, "Deep Sea");
-    Terrestrial Terrestrial1 = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
-    Dolphin Dolphin1 = new Dolphin("Delphinidae", "Bubbles", 9, true, "Ocean", 13.1f);
-    Penguin Penguin1 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
-
 }

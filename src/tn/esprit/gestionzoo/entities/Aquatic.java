@@ -1,6 +1,6 @@
 package tn.esprit.gestionzoo.entities;
 
-public non-sealed class Aquatic extends Animal  {
+public  class Aquatic extends Animal  {
     private String habitat;
     public Aquatic(){
     }
