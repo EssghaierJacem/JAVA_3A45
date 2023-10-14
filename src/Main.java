@@ -44,5 +44,12 @@ public class Main {
         System.out.println("Ajout du Dog : " + addedDog1);
         System.out.println("Ajout du Dog2 : " + addedDog2);
 
+        boolean zooIsFull = Oorbata.isZooFull();{
+        if (zooIsFull) {
+            System.out.println("The zoo is full.");
+        } else {
+            System.out.println("There is still room in the zoo.");
+        }
+    }
     }
 }
