@@ -17,4 +17,8 @@ public class Terrestrial extends Animal {
     public void setNbrLegs(int nbrLegs) {
         this.nbrLegs = nbrLegs;
     }
+    @Override
+    public String toString() {
+        return super.toString() + ", nbrLegs:" + nbrLegs;
+    }
 }

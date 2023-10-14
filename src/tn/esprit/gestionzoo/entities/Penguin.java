@@ -17,5 +17,9 @@ public class Penguin extends  Aquatic{
     public void setSwimmingDepth(float swimmingDepth) {
         this.swimmingDepth = swimmingDepth;
     }
+    @Override
+    public String toString() {
+        return super.toString() + ", swimmingDepth:" + swimmingDepth;
+    }
 }
 

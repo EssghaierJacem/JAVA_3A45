@@ -60,5 +60,20 @@ public class Main {
         Terrestrial Terrestrial1 = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
         Dolphin Dolphin1 = new Dolphin("Delphinidae", "Bubbles", 9, true, "Ocean", 13.1f);
         Penguin Penguin1 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
+
+        System.out.println("Details about the Aquatic1:");
+        System.out.println(Aquatic1.toString());
+
+        System.out.println("Details about the Dolpin1 :");
+        System.out.println(Dolphin1.toString());
+
+        System.out.println("Details about the Penguin:");
+        System.out.println(Penguin1.toString());
+
+        System.out.println("----------------");
+        Aquatic1.swim();
+        Dolphin1.swim();
+        Penguin1.swim();
+        // The Dolphin has their own redfined method, so it's results differs than the one Penguin automatically Inherited.
     }
 }
