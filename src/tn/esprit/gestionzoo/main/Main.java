@@ -1,7 +1,6 @@
 package tn.esprit.gestionzoo.main;
 
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,5 +55,25 @@ public class Main {
             System.out.println("There is still room in the zoo.");
         }
     }
+        // Héritage_Prosit 5
+        Aquatic Aquatic1 = new Aquatic("Octopus", "Oscar", 3, true, "Deep Sea");
+        Terrestrial Terrestrial1 = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
+        Dolphin Dolphin1 = new Dolphin("Delphinidae", "Bubbles", 9, true, "Ocean", 13.1f);
+        Penguin Penguin1 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
+
+        System.out.println("Details about the Aquatic1:");
+        System.out.println(Aquatic1.toString());
+
+        System.out.println("Details about the Dolpin1 :");
+        System.out.println(Dolphin1.toString());
+
+        System.out.println("Details about the Penguin:");
+        System.out.println(Penguin1.toString());
+
+        System.out.println("----------------");
+        Aquatic1.swim();
+        Dolphin1.swim();
+        Penguin1.swim();
+        // The Dolphin has their own redefined method, so it's results differs than the one Penguin automatically Inherited.
     }
 }
