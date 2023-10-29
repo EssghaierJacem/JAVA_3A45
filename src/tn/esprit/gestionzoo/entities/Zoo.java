@@ -101,21 +101,18 @@ public class Zoo {
         this.compteur_animal = compteur_animal;
     }
 
-    public boolean addAnimal(Animal animal) {
-        if (isZooFull()) {
-            System.out.println("Zoo is Full, it is impossible to add another animal!"); //Instruction 17: Condition d'ajout
-            return false;
-        } else {
+    public void addAnimal(Animal animal) throws ZooFullException, InvalidAgeException {
+        if (animal.getAge() < 0) {
+            throw new InvalidAgeException("Invalid age: " + animal.getAge());
         }
+
         if (compteur_animal < nbrCages) {
             animals[compteur_animal] = animal;
             compteur_animal++;
-            return true;
+            System.out.println(animal.getName() + " has been added to the zoo.");
+        } else {
+            throw new ZooFullException("The zoo is full, you cannot add more animals.");
         }
-        {
-            return false;
-        }
-
     }
 
     public boolean addAnimal2(Animal animal) {

@@ -3,7 +3,7 @@ package tn.esprit.gestionzoo.main;
 import tn.esprit.gestionzoo.entities.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ZooFullException, InvalidAgeException {
         Animal Lion = new Animal("Carnivore","Lion",21, true);
         Animal Elephant = new Animal("Elephant", "Herbivore", 4,false);
 
@@ -24,7 +24,24 @@ public class Main {
         Lion.displayAnimal();
         //System.out.print(Lion.toString());
 
-        System.out.println("Ajout de l'éléphant : " + Oorbata.addAnimal(Elephant));
+         Oorbata.addAnimal(Elephant);
+         //Testing the exception
+        Zoo Belvedere = new Zoo("Belvedere", "Tunis",3);
+        Animal Lion1 = new Animal("Carnivore","Lion1",21, true);
+        Animal Lion2 = new Animal("Carnivore","Lion2",21, true);
+         Animal Lion3 = new Animal("Carnivore","Lion3",-2, true);
+        Animal Lion4 = new Animal("Carnivore","Lion4",21, true);
+        Animal Lion5 = new Animal("Carnivore","Lion5",21, true);
+        try {
+            Belvedere.addAnimal(Lion1);
+            Belvedere.addAnimal(Lion2);
+            Belvedere.addAnimal(Lion3);
+            Belvedere.addAnimal(Lion5);
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
 
         //Instruction 11
         Zoo ZooTest = new Zoo("ZooTest", "London", 10);

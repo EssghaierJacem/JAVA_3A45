@@ -12,11 +12,9 @@ public  class Animal  {
             isMammal) {
         this.family = family;
         this.name = name;
-        if (age >= 0) {
+
             this.age = age;
-        } else {
-            throw new IllegalArgumentException("Age Cannot be negative");
-        }
+
         this.isMammal = isMammal;
     }
     public String getFamily() {
