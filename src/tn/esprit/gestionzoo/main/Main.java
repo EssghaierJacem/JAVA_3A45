@@ -60,6 +60,7 @@ public class Main {
         Terrestrial Terrestrial1 = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
         Dolphin Dolphin1 = new Dolphin("Delphinidae", "Bubbles", 9, true, "Ocean", 13.1f);
         Penguin Penguin1 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
+        Penguin Penguin2 = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 12.5f); //Added to test the MaxPenguinSwimming method :P
 
         System.out.println("Details about the Aquatic1:");
         System.out.println(Aquatic1.toString());
@@ -75,5 +76,23 @@ public class Main {
         Dolphin1.swim();
         Penguin1.swim();
         // The Dolphin has their own redefined method, so it's results differs than the one Penguin automatically Inherited.
+        Aquatic fish1 = new Aquatic("Poisson", "Dolphinho", 5, false, "Ocean");
+        Aquatic fish2 = new Aquatic("Poisson", "Shark", 3, true, "Lac");
+        Aquatic fish3 = new Aquatic("Poisson", "Chelba", 7, false, "River");
+
+        Oorbata.addAquaticAnimal(fish1);
+        Oorbata.addAquaticAnimal(fish2);
+        Oorbata.addAquaticAnimal(fish3);
+        Oorbata.addAquaticAnimal(Penguin1);
+        Oorbata.addAquaticAnimal(Penguin2);
+
+        fish1.swim();
+        fish2.swim();
+        fish3.swim(); // On remarque Que les animaux sont déclaré comme étant  des animaux aquatic. ( This Aquatic Animal is swimming ).
+
+        float maxDepth = Oorbata.maxPenguinSwimmingDepth();
+        System.out.println("La profondeur maximale des pingouins dans le zoo est : " + maxDepth);
+
+        Oorbata.displayNumberOfAquaticsByType();
     }
-}
+    }
