@@ -111,5 +111,22 @@ public class Main {
         System.out.println("La profondeur maximale des pingouins dans le zoo est : " + maxDepth);
 
         Oorbata.displayNumberOfAquaticsByType();
+        //Prosit8
+        Aquatic aquaticAnimal = new Aquatic("Octopus", "Oscar", 3, true, "Deep Sea");
+        Penguin Peng = new Penguin("Spheniscidae", "Chirp", 1, true, "Ocean", 19.5f);
+        Terrestrial terrestrialAnimal = new Terrestrial("Giraffe", "Stretch", 8, true, 4);
+
+        Food meatFood = Food.MEAT;
+        Food plantFood = Food.PLANT;
+        Food bothFood = Food.BOTH;
+
+        aquaticAnimal.eatMeat(meatFood);
+
+        Peng.eatMeat(meatFood);
+
+        terrestrialAnimal.eatMeat(meatFood);
+        terrestrialAnimal.eatPlant(plantFood);
+        terrestrialAnimal.eatPlantAndMeat(bothFood);
+
     }
     }
