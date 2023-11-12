@@ -1,9 +1,42 @@
 package tn.esprit.gestionzoo.main;
 
+import tn.esprit.gestionzoo.Employe.Employe;
+import tn.esprit.gestionzoo.Employe.SocieteArrayList;
 import tn.esprit.gestionzoo.entities.*;
 
 public class Main {
     public static void main(String[] args) throws ZooFullException, InvalidAgeException {
+        ///Prosit9
+        SocieteArrayList societe = new SocieteArrayList();
+        Employe employe1 = new Employe(1, "Micheal", "Scott", "Manager", 2);
+        Employe employe3 = new Employe(3, "Jim", "Halpert", "Sales", 3);
+        Employe employe2 = new Employe(2, "Pam", "Beasly", "Sales", 3);
+
+        societe.ajouterEmploye(employe1);
+        societe.ajouterEmploye(employe2);
+        societe.ajouterEmploye(employe3);
+
+        System.out.println("List of Employees:");
+        societe.displayEmploye();
+
+        String searchName = "Micheal";
+        if (societe.rechercherEmploye(searchName)) {
+            System.out.println("Employee with name " + searchName + " found.");
+        } else {
+            System.out.println("Employee with name " + searchName + " not found.");
+        }
+
+        societe.trierEmployeParId();
+
+        System.out.println("\nList of Employees (Sorted by ID):");
+        societe.displayEmploye();
+
+        societe.trierEmployeParNomDépartementEtGrade();
+
+        System.out.println("\nList of Employees (Sorted by Name, Department, and Grade):");
+        societe.displayEmploye();
+
+        ///////////
         Animal Lion = new Animal("Carnivore","Lion",21, true);
         Animal Elephant = new Animal("Elephant", "Herbivore", 4,false);
 
@@ -127,6 +160,7 @@ public class Main {
         terrestrialAnimal.eatMeat(meatFood);
         terrestrialAnimal.eatPlant(plantFood);
         terrestrialAnimal.eatPlantAndMeat(bothFood);
+
 
     }
     }
